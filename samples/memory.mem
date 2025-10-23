@@ -1,0 +1,15 @@
+...binary garbage...
+user=alice
+password=secret1234
+db_pass=MyDBP@ssw0rd!
+Connecting to 10.0.1.23:3306
+LastLoginUser=bob
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD...
+some random bytes
+api_key=ABCD-1234-XYZ
+Attempt from 203.0.113.50
+pwd=helloWorld
+-----BEGIN RSA PRIVATE KEY-----
+MIIEpAIBAAKCAQEAu...
+-----END RSA PRIVATE KEY-----
+...more binary...

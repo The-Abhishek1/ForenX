@@ -1,0 +1,13 @@
+🔜 Next Step Options
+
+Now that your framework is working, we can add next features one by one:
+
+Feature 1: Count failed login attempts per IP and detect brute-force.
+
+Feature 2: Add recover action — analyze memory dumps with Volatility.
+
+Feature 3: Add report action — generate CSV/HTML summary.
+
+Feature 4: Add --verbose flag for detailed console output.
+
+Feature 5: Add config file support (config.yaml).

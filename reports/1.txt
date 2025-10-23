@@ -1,0 +1,22 @@
+========== ForenX Log Analysix Report =========
+
+Total Successful Logins: 5
+Total Failed Attempts: 10
+
+Top 3 Users with Failed Attempts:
+  - root: 7 times
+  - carol: 3 times
+
+Top 3 Attacker IPs:
+  - 192.0.2.45: 3 times
+  - 192.168.1.15: 3 times
+  - 192.168.1.10: 2 times
+
+Recent Login Activity (last 5 entries):
+  Oct 20 22:16:12 - User: alice - IP: 10.0.0.5
+  Oct 21 03:33:02 - User: dave - IP: 10.0.1.23
+  Oct 21 08:15:42 - User: frank - IP: 10.0.0.45
+  Oct 22 03:46:01 - User: alice - IP: 10.0.0.5
+  Oct 22 05:05:20 - User: george - IP: 10.0.2.8
+
+
