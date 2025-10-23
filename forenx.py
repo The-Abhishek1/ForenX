@@ -67,7 +67,7 @@ def main():
 			results = log_analyzer.analyze(args.input)
 		else:
 			# memory dump analyzer
-			results = log_analyzer.analyze(args.input)
+			results = memory_analyzer.analyze(args.input)
 		with open(args.output, "w") as f:
 			for line in results:
 				f.write(line + "\n")
