@@ -1,3 +1,5 @@
+# modules/network_traffic_analyzer.py
+
 from scapy.all import rdpcap, IP, TCP, Raw
 from typing import List, Tuple
 from collections import Counter
@@ -171,32 +173,24 @@ def extract_unique_ips(pcap_path: str) -> List[str]:
     return sorted(ips)
 
 # ============== Main ============================================
-def main(pcap_path: str):
-    print(f"[*] Analyzing the PCAP file...\n")
+def analyze(pcap_path: str):
+    results = []
+    results.append("[*] Analyzing the PCAP file...\n")
     ips = extract_unique_ips(pcap_path)
-    print(f"[+] Found {len(ips)} unique IPs.")
+    results.append(f"[+] Found {len(ips)} unique IPs.")
     for ip in ips:
-        print("   ",ip)
+        results.append(f"   {ip}")
     
-    print(f"\n[+] Top destination ports:")
+    results.append(f"\n[+] Top destination ports:")
     for port, count in summarize_sorts(pcap_path):
-        print(f"    Port {port} - {count} packets")
+        results.append(f"    Port {port} - {count} packets")
     
-    print(f"\n[+] Scannig for suspicious ports...")
+    results.append(f"\n[+] Scannig for suspicious ports...")
     for alert in detect_suspicious_ports(pcap_path):
-        print(f"    {alert}")
+        results.append(f"    {alert}")
         
-    print(f"\n[+] Scanning for credential leaks in payloads...")
+    results.append(f"\n[+] Scanning for credential leaks in payloads...")
     for alert in detect_credential_leaks(pcap_path):
-        print(f"    {alert}")
-    print("\n")
-    
+        results.append(f"    {alert}")
 
-# ============= __main__ =========================================
-if __name__ == "__main__":
-    import argparse
-    parser = argparse.ArgumentParser(description="Network analyzer - extract unique IPs from pcap")
-    parser.add_argument("-i", "--input", required=True, help="Path to .pcap file")
-    args = parser.parse_args()
-    
-    main(args.input)
+    return results

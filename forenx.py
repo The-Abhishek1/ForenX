@@ -9,6 +9,8 @@ from datetime import datetime
 # Import modules
 from modules import log_analyzer
 from modules import memory_analyzer
+from modules import file_extractor
+from modules import network_traffic_analyzer
 
 BANNER = r"""
 
@@ -36,8 +38,8 @@ def main():
 	parser.add_argument(
 		"--action", "-a",
 		required=True,
-		choices=["analyze","recover","report"],
-		help="Action to perform: analyze | recover | report"
+		choices=["analyze","extract","recover","report"],
+		help="Action to perform: analyze | extract | recover | report"
 	)
 
 	parser.add_argument(
@@ -58,21 +60,40 @@ def main():
 
 	#Action handler
 	if args.action == "analyze":
-		print(f"[+] Starting log analyzis on {args.input}")
+		print(f"[+] Starting analysis on {args.input}")
 
-		# determine module by input filename heuristics
+		# Determine which module to call based on file type
 		lower = args.input.lower()
-		if lower.endswith((".log", ".txt")) or "auth" in lower or "auth" in lower:
-			# log analyzer
+
+		if lower.endswith((".log", ".txt")) or "auth" in lower:
+			# Log file detected → use log_analyzer
 			results = log_analyzer.analyze(args.input)
-		else:
-			# memory dump analyzer
+
+		elif lower.endswith((".mem", ".dump", ".bin")):
+			# Memory dump detected → use memory_analyzer
 			results = memory_analyzer.analyze(args.input)
+
+		elif lower.endswith((".pcap", ".pcapng")):
+			# Network capture detected → use network_traffic_analyzer
+			results = network_traffic_analyzer.analyze(args.input)
+
+		else:
+			print("[!] Unsupported file type. Please provide a valid log, memory, or pcap file.")
+			sys.exit(1)
+
+		# Save results
 		with open(args.output, "w") as f:
 			for line in results:
 				f.write(line + "\n")
-		print(f"[*] Analyzis complete. Results saved to {args.output}")
 
+		print(f"[*] Analysis complete. Results saved to {args.output}")
+
+
+	elif args.action == "extract":
+		print(f"[+] Starting extraction analysis on {args.input}")
+		results = file_extractor.analyze_path(args.input, limit = None)
+		file_extractor.generate_csv_report(results, args.output)
+		print(f"[*] Extraction complete. Results saved to {args.output}")
 
 	elif args.action == "recover":
 		print(f"[*] Recovery modue not yet implemented.")

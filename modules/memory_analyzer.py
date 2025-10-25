@@ -1,12 +1,4 @@
 # modules/memory_analyzer.py
-"""
-ForenX - Memory Analyzer (first-pass triage)
-Scans a binary blob (memory dump) for printable ASCII strings and applies heuristics/regexes
-to extract IOCs: IPs, emails, URLs, credential-like strings, JWTs, API keys, SSH key markers,
-and high-entropy strings.
-
-This is a triage tool — not a replacement for volatility/volatility3 full memory forensics.
-"""
 
 from typing import List, Iterable, Tuple
 import re
