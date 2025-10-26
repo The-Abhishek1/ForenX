@@ -1,0 +1,54 @@
+[+] Starting scanning on Directory: samples
+
+[FILE] samples/auth.log
+    Size: 2189 bytes
+    Type: unknown
+    Created: 2025-10-23 20:58:57
+    Modified: 2025-10-22 19:42:38
+    Hidden: No
+    Hashes:
+        MD5: dd7d519afd79393af363e5278abe4ded
+        SHA1: 9f219f0253fcf443df37e47c8887360803321c3c
+        SHA256: 4d5a807ff0f119d47699dad83a0be125a50612f8333ac46eb33395cd8cb9cd93
+[FILE] samples/memory.mem
+    Size: 1456 bytes
+    Type: unknown
+    Created: 2025-10-23 20:58:57
+    Modified: 2025-10-23 20:58:29
+    Hidden: No
+    Hashes:
+        MD5: 54ed34da788fce5eb92abc593bd87724
+        SHA1: 8506be75ac8b4fec2eff01eb5341db65a3486244
+        SHA256: 825897deb6308334cdd5186bd16baadb359de175a0ac6a56ed2937fbde90614b
+[FILE] samples/packets.pcapng
+    Size: 2144260 bytes
+    Type: unknown
+    Created: 2025-10-24 20:16:42
+    Modified: 2025-10-24 20:16:09
+    Hidden: No
+    Hashes:
+        MD5: 9d00530a02f64094bdee7e51a5fa634f
+        SHA1: ca0cce2123d7d4be959fb17a307a8f12f319d665
+        SHA256: 96f5638a2ded2fc71de138ff3da1509f270d5d4e48cf410481cfcb92378c6cce
+[FILE] samples/.hidden.txt
+    Size: 7 bytes
+    Type: text/plain
+    Created: 2025-10-26 19:52:51
+    Modified: 2025-10-26 19:52:06
+    Hidden: Yes
+    Hashes:
+        MD5: dd02c7c2232759874e1c205587017bed
+        SHA1: fc683cd9ed1990ca2ea10b84e5e6fba048c24929
+        SHA256: b37e50cedcd3e3f1ff64f4afc0422084ae694253cf399326868e07a35f4a45fb
+[FILE] samples/test.jpg
+    Size: 3890 bytes
+    Type: image/jpeg
+    Created: 2025-10-26 19:53:09
+    Modified: 2024-07-22 14:50:38
+    Hidden: No
+    Hashes:
+        MD5: 0fb9be0168651a9f7c503ace128d41a8
+        SHA1: 1cf8e4a2b26f6146e4f4204b079bc81167b9e1b9
+        SHA256: bf6fd1bb62f71e94fbb90d90fb84c71a4ac9b1235f6e476ec1135c70b92fc2e4
+
+

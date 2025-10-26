@@ -61,20 +61,18 @@ def main():
 	#Action handler
 	if args.action == "analyze":
 		print(f"[+] Starting analysis on {args.input}")
-
-		# Determine which module to call based on file type
 		lower = args.input.lower()
 
 		if lower.endswith((".log", ".txt")) or "auth" in lower:
-			# Log file detected → use log_analyzer
+			# use log_analyzer
 			results = log_analyzer.analyze(args.input)
 
 		elif lower.endswith((".mem", ".dump", ".bin")):
-			# Memory dump detected → use memory_analyzer
+			# use memory_analyzer
 			results = memory_analyzer.analyze(args.input)
 
 		elif lower.endswith((".pcap", ".pcapng")):
-			# Network capture detected → use network_traffic_analyzer
+			# use network_traffic_analyzer
 			results = network_traffic_analyzer.analyze(args.input)
 
 		else:
@@ -91,8 +89,12 @@ def main():
 
 	elif args.action == "extract":
 		print(f"[+] Starting extraction analysis on {args.input}")
-		results = file_extractor.analyze_path(args.input, limit = None)
-		file_extractor.generate_csv_report(results, args.output)
+		results = file_extractor.extract_full_metadata(args.input)
+
+		# Save results
+		with open(args.output, "w") as f:
+			for line in results:
+				f.write(line + "\n")
 		print(f"[*] Extraction complete. Results saved to {args.output}")
 
 	elif args.action == "recover":

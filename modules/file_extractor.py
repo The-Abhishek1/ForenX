@@ -82,14 +82,16 @@ def _analyze_file(file_path: str) -> str:
 
 def extract_full_metadata(target_path: str) -> List[str]:
     report = []
-
     if os.path.isfile(target_path):
+        report.append(f"[+] Starting scanning on File: {target_path}\n")
         report.append(_analyze_file(target_path))
     else:
+        report.append(f"[+] Starting scanning on Directory: {target_path}\n")
         for root, dirs, files in os.walk(target_path):
             for file in files:
                 full_path = os.path.join(root, file)
                 report.append(_analyze_file(full_path))
 
+    report.append(f"\n")
     return report
 
