@@ -1,242 +1,95 @@
-# modules/file_extractor.py
-
-# modules/file_extractor.py
-"""
-ForenX - File Artifact Extractor
-Scans a directory (or mounted image) for files, computes metadata and hashes,
-and flags suspicious files based on simple heuristics (executable headers, suspicious extensions,
-hidden files, location like /tmp, recent modification, large size).
-"""
-
-from typing import List, Dict, Tuple, Optional, Iterable
 import os
+from datetime import datetime
+from typing import List
 import hashlib
 import mimetypes
-from pathlib import Path
-from collections import Counter
-import csv
-import json
-import time
-from datetime import datetime, timedelta
+from PIL import Image, ExifTags
 
-# ---------------------------
-# Config / heuristics
-# ---------------------------
-SUSPICIOUS_EXTENSIONS = {
-    ".exe", ".dll", ".scr", ".bat", ".cmd", ".ps1", ".sh", ".py", ".jar", ".bin", ".elf"
-}
-TEMP_DIR_INDICATORS = {"/tmp", "/var/tmp", "\\\\Temp\\"} 
-LARGE_FILE_BYTES = 100 * 1024 * 1024
-RECENT_DAYS = 7 
-
-# ---------------------------
-# Utility functions
-# ---------------------------
-def compute_hashes(path: str, algorithms: Optional[List[str]] = None) -> Dict[str, str]:
-    if algorithms is None:
-        algorithms = ["md5", "sha1", "sha256"]
-
-    hash_objs = {}
-    for a in algorithms:
-        if a.lower() == "md5":
-            hash_objs["md5"] = hashlib.md5()
-        elif a.lower() == "sha1":
-            hash_objs["sha1"] = hashlib.sha1()
-        elif a.lower() == "sha256":
-            hash_objs["sha256"] = hashlib.sha256()
-        else:
-            continue
-
-    # read in chunks
+def get_hashes(file_path: str) -> dict:
+    hashes = {'md5': None, 'sha1': None, 'sha256': None}
     try:
-        with open(path, "rb") as f:
-            while True:
-                chunk = f.read(1024 * 1024)
-                if not chunk:
-                    break
-                for h in hash_objs.values():
-                    h.update(chunk)
+        with open(file_path, "rb") as f:
+            data = f.read()
+            hashes['md5'] = hashlib.md5(data).hexdigest()
+            hashes['sha1'] = hashlib.sha1(data).hexdigest()
+            hashes['sha256'] = hashlib.sha256(data).hexdigest()
     except Exception as e:
-        # on error return empty strings
-        return {k: "" for k in hash_objs.keys()}
+        hashes['error'] = str(e)
+    return hashes
 
-    return {k: v.hexdigest() for k, v in hash_objs.items()}
-
-
-def get_basic_file_info(path: str) -> Dict[str, object]:
-    p = Path(path)
-    stat = p.stat()
-    size = stat.st_size
-    mtime = datetime.fromtimestamp(stat.st_mtime)
-    atime = datetime.fromtimestamp(stat.st_atime)
-    ctime = datetime.fromtimestamp(stat.st_ctime)
-    ext = p.suffix.lower()
-    mime, _ = mimetypes.guess_type(path)
-    is_exec_bit = os.access(path, os.X_OK)
-
-    return {
-        "path": str(p.resolve()),
-        "name": p.name,
-        "size": size,
-        "mtime": mtime.isoformat(),
-        "atime": atime.isoformat(),
-        "ctime": ctime.isoformat(),
-        "extension": ext,
-        "mimetype": mime or "unknown",
-        "is_executable_bit": is_exec_bit,
-    }
-
-
-def read_magic_bytes(path: str, num: int = 512) -> bytes:
+def get_exif_data(file_path: str) -> dict:
+    exif_info = {}
     try:
-        with open(path, "rb") as f:
-            return f.read(num)
+        image = Image.open(file_path)
+        exif_data = image._getexif()
+        if exif_data:
+            for tag, value in exif_data.items():
+                tag_name = ExifTags.TAGS.get(tag, tag)
+                exif_info[tag_name] = str(value)
     except Exception:
-        return b""
+        pass  # Not an image or EXIF unavailable
+    return exif_info
 
+def is_hidden(file_path: str) -> bool:
+    return os.path.basename(file_path).startswith(".")
 
-def check_magic_header(path: str) -> Optional[str]:
-    """
-    Inspect the file header and return a short marker if known:
-      - 'ELF'  -> ELF binary (Linux)
-      - 'PE'   -> PE (Windows) (MZ)
-      - 'ZIP'  -> ZIP/JAR
-      - 'PDF'  -> PDF
-      - None   -> unknown / not recognized
-    """
-    head = read_magic_bytes(path, 8)
-    if head.startswith(b"\x7fELF"):
-        return "ELF"
-    if head.startswith(b"MZ"):
-        return "PE"
-    if head.startswith(b"PK\x03\x04"):
-        return "ZIP"
-    if head.startswith(b"%PDF"):
-        return "PDF"
-    return None
-
-
-# ---------------------------
-# Suspicion heuristics
-# ---------------------------
-def is_in_temp_dir(path: str) -> bool:
-    lower = path.lower()
-    for t in TEMP_DIR_INDICATORS:
-        if t.lower() in lower:
-            return True
-    return False
-
-
-def is_recent(mtime_iso: str, days: int = RECENT_DAYS) -> bool:
+def _get_metadata(file_path: str) -> str:
     try:
-        m = datetime.fromisoformat(mtime_iso)
-    except Exception:
-        return False
-    return (datetime.now() - m) <= timedelta(days=days)
+        stats = os.stat(file_path)
+        size = stats.st_size
+        created = datetime.fromtimestamp(stats.st_ctime).strftime("%Y-%m-%d %H:%M:%S")
+        modified = datetime.fromtimestamp(stats.st_mtime).strftime("%Y-%m-%d %H:%M:%S")
 
+        return f"[FILE] {file_path}\n    Size: {size} bytes\n    Created: {created}\n    Modified: {modified}"
+    except Exception as e:
+        return f"[ERROR] {file_path}: {e}"
+    
+    
+def _analyze_file(file_path: str) -> str:
+    try:
+        stats = os.stat(file_path)
+        size = stats.st_size
+        created = datetime.fromtimestamp(stats.st_ctime).strftime("%Y-%m-%d %H:%M:%S")
+        modified = datetime.fromtimestamp(stats.st_mtime).strftime("%Y-%m-%d %H:%M:%S")
+        file_type = mimetypes.guess_type(file_path)[0] or "unknown"
+        hidden = is_hidden(file_path)
+        hashes = get_hashes(file_path)
+        exif = get_exif_data(file_path)
 
-def evaluate_suspicion(path: str, info: Dict[str, object]) -> Tuple[bool, List[str]]:
-    """
-    Heuristics:
-      - suspicious extension
-      - file in temp dir
-      - executable header detected (ELF/PE)
-      - executable bit set
-      - large file size
-      - recently modified
-      - hidden filename (starts with .)
-    """
-    reasons: List[str] = []
-    ext = info.get("extension", "")
-    size = info.get("size", 0)
-    mtime = info.get("mtime", "")
-    name = info.get("name", "")
+        entry = [
+            f"[FILE] {file_path}",
+            f"    Size: {size} bytes",
+            f"    Type: {file_type}",
+            f"    Created: {created}",
+            f"    Modified: {modified}",
+            f"    Hidden: {'Yes' if hidden else 'No'}",
+            f"    Hashes:",
+            f"        MD5: {hashes['md5']}",
+            f"        SHA1: {hashes['sha1']}",
+            f"        SHA256: {hashes['sha256']}",
+        ]
 
-    magic = check_magic_header(path)
-    if ext in SUSPICIOUS_EXTENSIONS:
-        reasons.append(f"suspicious_extension:{ext}")
-    if is_in_temp_dir(path):
-        reasons.append("in_temp_directory")
-    if magic:
-        reasons.append(f"header:{magic}")
-    if info.get("is_executable_bit", False):
-        reasons.append("exec_bit_set")
-    if size and size >= LARGE_FILE_BYTES:
-        reasons.append(f"large_file:{size}")
-    if is_recent(mtime):
-        reasons.append(f"recently_modified:{mtime}")
-    if name.startswith("."):
-        reasons.append("hidden_filename")
+        if exif:
+            entry.append("    EXIF Data:")
+            for k, v in exif.items():
+                entry.append(f"        {k}: {v[:80]}")
 
-    return (len(reasons) > 0, reasons)
+        return "\n".join(entry)
 
+    except Exception as e:
+        return f"[ERROR] {file_path}: {e}"
+    
 
-# ---------------------------
-# Directory walk & analysis
-# ---------------------------
-def iterate_files(root: str, follow_symlinks: bool = False) -> Iterable[str]:
-    root_p = Path(root)
-    if not root_p.exists():
-        return
+def extract_full_metadata(target_path: str) -> List[str]:
+    report = []
 
-    for dirpath, dirs, files in os.walk(root, followlinks=follow_symlinks):
-        for fname in files:
-            fp = os.path.join(dirpath, fname)
-            yield fp
+    if os.path.isfile(target_path):
+        report.append(_analyze_file(target_path))
+    else:
+        for root, dirs, files in os.walk(target_path):
+            for file in files:
+                full_path = os.path.join(root, file)
+                report.append(_analyze_file(full_path))
 
+    return report
 
-def analyze_path(root: str, limit: Optional[int] = None) -> List[Dict[str, object]]:
-    results: List[Dict[str, object]] = []
-    count = 0
-    for fp in iterate_files(root):
-        try:
-            basic = get_basic_file_info(fp)
-        except Exception:
-            continue
-
-        # optional limit for fast testing
-        if limit and count >= limit:
-            break
-        count += 1
-
-        # hashes (compute for small files or as needed)
-        hashes = compute_hashes(fp, algorithms=["md5", "sha1", "sha256"])
-        magic = check_magic_header(fp)
-        suspicious, reasons = evaluate_suspicion(fp, basic)
-
-        row = {
-            **basic,
-            **hashes,
-            "magic_header": magic or "",
-            "suspicious": suspicious,
-            "reasons": reasons,
-        }
-        results.append(row)
-
-    return results
-
-
-# ---------------------------
-# Reporting / export
-# ---------------------------
-def generate_csv_report(results: List[Dict[str, object]], outpath: str) -> None:
-    """
-    Save results to CSV. Columns chosen for easy reading.
-    """
-    if not results:
-        return
-    keys = [
-        "path", "name", "size", "mtime", "extension", "mimetype",
-        "md5", "sha1", "sha256", "magic_header", "is_executable_bit",
-        "suspicious", "reasons"
-    ]
-    with open(outpath, "w", newline="", encoding="utf-8") as csvf:
-        w = csv.writer(csvf)
-        w.writerow(keys)
-        for r in results:
-            w.writerow([r.get(k, "") if k != "reasons" else ";".join(r.get("reasons", [])) for k in keys])
-
-
-def generate_json_report(results: List[Dict[str, object]], outpath: str) -> None:
-    with open(outpath, "w", encoding="utf-8") as jf:
-        json.dump(results, jf, indent=2, default=str)
