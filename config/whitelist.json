@@ -1,0 +1,12 @@
+{
+  "paths": [
+    "/usr/bin/python3",
+    "/bin/bash",
+    "/usr/sbin/sshd",
+    "/sbin/init"
+  ],
+  "hashes": [
+    "sha256:3a7bd3e2360a... (example)",
+    "md5:5d41402abc4b2a76b9719d911017c592"
+  ]
+}

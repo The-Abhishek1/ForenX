@@ -1,0 +1,326 @@
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.0  21464 13324 ?        Ss   15:51   0:02 /sbin/init splash noautomount splash
+root           2  0.0  0.0      0     0 ?        S    15:51   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        S    15:51   0:00 [pool_workqueue_release]
+root           4  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-kvfree_rcu_reclaim]
+root           5  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-rcu_gp]
+root           6  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-sync_wq]
+root           7  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-slub_flushwq]
+root           8  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-netns]
+root          11  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/0:0H-events_highpri]
+root          13  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-mm_percpu_wq]
+root          14  0.0  0.0      0     0 ?        I    15:51   0:00 [rcu_tasks_kthread]
+root          15  0.0  0.0      0     0 ?        I    15:51   0:00 [rcu_tasks_rude_kthread]
+root          16  0.0  0.0      0     0 ?        I    15:51   0:00 [rcu_tasks_trace_kthread]
+root          17  0.0  0.0      0     0 ?        S    15:51   0:00 [ksoftirqd/0]
+root          18  0.0  0.0      0     0 ?        I    15:51   0:10 [rcu_preempt]
+root          19  0.0  0.0      0     0 ?        S    15:51   0:00 [rcu_exp_par_gp_kthread_worker/0]
+root          20  0.0  0.0      0     0 ?        S    15:51   0:00 [rcu_exp_gp_kthread_worker]
+root          21  0.0  0.0      0     0 ?        S    15:51   0:00 [migration/0]
+root          22  0.0  0.0      0     0 ?        S    15:51   0:00 [idle_inject/0]
+root          23  0.0  0.0      0     0 ?        S    15:51   0:00 [cpuhp/0]
+root          24  0.0  0.0      0     0 ?        S    15:51   0:00 [cpuhp/2]
+root          25  0.0  0.0      0     0 ?        S    15:51   0:00 [idle_inject/2]
+root          26  0.0  0.0      0     0 ?        S    15:51   0:00 [migration/2]
+root          27  0.0  0.0      0     0 ?        S    15:51   0:00 [ksoftirqd/2]
+root          29  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/2:0H-events_highpri]
+root          30  0.0  0.0      0     0 ?        S    15:51   0:00 [cpuhp/4]
+root          31  0.0  0.0      0     0 ?        S    15:51   0:00 [idle_inject/4]
+root          32  0.0  0.0      0     0 ?        S    15:51   0:00 [migration/4]
+root          33  0.0  0.0      0     0 ?        S    15:51   0:00 [ksoftirqd/4]
+root          35  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/4:0H-events_highpri]
+root          36  0.0  0.0      0     0 ?        S    15:51   0:00 [cpuhp/6]
+root          37  0.0  0.0      0     0 ?        S    15:51   0:00 [idle_inject/6]
+root          38  0.0  0.0      0     0 ?        S    15:51   0:00 [migration/6]
+root          39  0.0  0.0      0     0 ?        S    15:51   0:00 [ksoftirqd/6]
+root          41  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/6:0H-events_highpri]
+root          42  0.0  0.0      0     0 ?        S    15:51   0:00 [cpuhp/1]
+root          43  0.0  0.0      0     0 ?        S    15:51   0:00 [idle_inject/1]
+root          44  0.0  0.0      0     0 ?        S    15:51   0:00 [migration/1]
+root          45  0.0  0.0      0     0 ?        S    15:51   0:00 [ksoftirqd/1]
+root          47  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/1:0H-events_highpri]
+root          48  0.0  0.0      0     0 ?        S    15:51   0:00 [cpuhp/3]
+root          49  0.0  0.0      0     0 ?        S    15:51   0:00 [idle_inject/3]
+root          50  0.0  0.0      0     0 ?        S    15:51   0:00 [migration/3]
+root          51  0.0  0.0      0     0 ?        S    15:51   0:00 [ksoftirqd/3]
+root          53  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/3:0H-events_highpri]
+root          54  0.0  0.0      0     0 ?        S    15:51   0:00 [cpuhp/5]
+root          55  0.0  0.0      0     0 ?        S    15:51   0:00 [idle_inject/5]
+root          56  0.0  0.0      0     0 ?        S    15:51   0:00 [migration/5]
+root          57  0.0  0.0      0     0 ?        S    15:51   0:00 [ksoftirqd/5]
+root          59  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/5:0H-events_highpri]
+root          60  0.0  0.0      0     0 ?        S    15:51   0:00 [cpuhp/7]
+root          61  0.0  0.0      0     0 ?        S    15:51   0:00 [idle_inject/7]
+root          62  0.0  0.0      0     0 ?        S    15:51   0:00 [migration/7]
+root          63  0.0  0.0      0     0 ?        S    15:51   0:00 [ksoftirqd/7]
+root          65  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/7:0H-events_highpri]
+root          74  0.0  0.0      0     0 ?        S    15:51   0:00 [kdevtmpfs]
+root          75  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-inet_frag_wq]
+root          76  0.0  0.0      0     0 ?        S    15:51   0:00 [kauditd]
+root          77  0.0  0.0      0     0 ?        S    15:51   0:00 [khungtaskd]
+root          78  0.0  0.0      0     0 ?        S    15:51   0:00 [oom_reaper]
+root          79  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-writeback]
+root          80  0.0  0.0      0     0 ?        S    15:51   0:07 [kcompactd0]
+root          81  0.0  0.0      0     0 ?        SN   15:51   0:00 [ksmd]
+root          82  0.0  0.0      0     0 ?        SN   15:51   0:01 [khugepaged]
+root          83  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-kintegrityd]
+root          84  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-kblockd]
+root          85  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-blkcg_punt_bio]
+root          86  0.0  0.0      0     0 ?        S    15:51   0:00 [irq/9-acpi]
+root          88  0.0  0.0      0     0 ?        I    15:51   0:00 [kworker/3:1-mm_percpu_wq]
+root          89  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-tpm_dev_wq]
+root          90  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-edac-poller]
+root          91  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-devfreq_wq]
+root          92  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/0:1H-kblockd]
+root          93  0.0  0.0      0     0 ?        S    15:51   0:00 [irq/25-AMD-Vi]
+root          94  0.0  0.0      0     0 ?        S    15:51   0:05 [kswapd0]
+root         103  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-kthrotld]
+root         107  0.0  0.0      0     0 ?        S    15:51   0:00 [irq/26-aerdrv]
+root         108  0.0  0.0      0     0 ?        S    15:51   0:00 [irq/26-pciehp]
+root         109  0.0  0.0      0     0 ?        S    15:51   0:00 [irq/27-aerdrv]
+root         110  0.0  0.0      0     0 ?        S    15:51   0:00 [irq/29-aerdrv]
+root         111  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-acpi_thermal_pm]
+root         112  0.0  0.0      0     0 ?        I    15:51   0:01 [kworker/2:1-events]
+root         114  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-mld]
+root         115  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/3:1H-kblockd]
+root         116  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-ipv6_addrconf]
+root         121  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-kstrp]
+root         130  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-cryptd]
+root         229  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/2:1H-kblockd]
+root         267  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/7:1H-kblockd]
+root         271  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/6:1H-kblockd]
+root         276  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/4:1H-kblockd]
+root         282  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/1:1H-kblockd]
+root         307  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-nvme-wq]
+root         308  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-nvme-reset-wq]
+root         309  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-nvme-delete-wq]
+root         310  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-nvme-auth-wq]
+root         327  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-ata_sff]
+root         330  0.0  0.0      0     0 ?        S    15:51   0:00 [irq/51-ELAN1300:00]
+root         331  0.0  0.0      0     0 ?        S    15:51   0:00 [scsi_eh_0]
+root         332  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-scsi_tmf_0]
+root         337  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/5:1H-kblockd]
+root         341  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-amdgpu-reset-dev]
+root         342  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-ttm]
+root         343  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-amdgpu_dm_hpd_rx_offload_wq]
+root         344  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-amdgpu_dm_hpd_rx_offload_wq]
+root         345  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-dm_vblank_control_workqueue]
+root         346  0.0  0.0      0     0 ?        S    15:51   0:00 [card0-crtc0]
+root         347  0.0  0.0      0     0 ?        S    15:51   0:00 [card0-crtc1]
+root         348  0.0  0.0      0     0 ?        S    15:51   0:00 [card0-crtc2]
+root         349  0.0  0.0      0     0 ?        S    15:51   0:00 [card0-crtc3]
+root         350  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-gfx]
+root         351  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-comp_1.0.0]
+root         352  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-comp_1.1.0]
+root         353  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-comp_1.2.0]
+root         354  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-comp_1.3.0]
+root         355  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-comp_1.0.1]
+root         356  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-comp_1.1.1]
+root         357  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-comp_1.2.1]
+root         358  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-comp_1.3.1]
+root         359  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-sdma0]
+root         360  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-vcn_dec]
+root         361  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-vcn_enc0]
+root         362  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-vcn_enc1]
+root         363  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-jpeg_dec]
+root         379  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-xfsalloc]
+root         380  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-xfs_mru_cache]
+root         387  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-md]
+root         388  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-md_bitmap]
+root         393  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-raid5wq]
+root         439  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-btrfs-worker]
+root         440  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-btrfs-delalloc]
+root         441  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-btrfs-flush_delalloc]
+root         442  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-btrfs-cache]
+root         443  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-btrfs-fixup]
+root         444  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-btrfs-endio]
+root         445  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-btrfs-endio-meta]
+root         446  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-btrfs-rmw]
+root         447  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-btrfs-endio-write]
+root         448  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-btrfs-compressed-write]
+root         449  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-btrfs-freespace-write]
+root         450  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-btrfs-delayed-meta]
+root         451  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-btrfs-qgroup-rescan]
+root         452  0.0  0.0      0     0 ?        S    15:51   0:06 [btrfs-cleaner]
+root         453  0.1  0.0      0     0 ?        S    15:51   0:20 [btrfs-transaction]
+root         503  0.0  0.0      0     0 ?        S    15:51   0:00 [psimon]
+root         519  0.0  0.1 132392 20820 ?        Ss   15:51   0:01 /lib/systemd/systemd-journald
+root         555  0.0  0.0  28948  7816 ?        Ss   15:51   0:00 /lib/systemd/systemd-udevd
+root         569  0.0  0.0      0     0 ?        S    15:51   0:00 [psimon]
+root         663  0.0  0.0      0     0 ?        S    15:51   0:00 [watchdogd]
+root         664  0.0  0.0      0     0 ?        S    15:51   0:00 [ccp-1-q2]
+root         665  0.0  0.0      0     0 ?        S    15:51   0:00 [ccp-1-q3]
+root         666  0.0  0.0      0     0 ?        S    15:51   0:00 [ccp-1-q4]
+root         667  0.0  0.0      0     0 ?        S    15:51   0:00 [hwrng]
+root         757  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-cfg80211]
+root         782  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-led_workqueue]
+root         806  0.0  0.0   8268  6332 ?        Ss   15:51   0:00 /usr/sbin/haveged --Foreground --verbose=1
+root         832  0.0  0.0      0     0 ?        S    15:51   0:08 [irq/67-iwlwifi]
+root         905  0.0  0.0 237160  7936 ?        Ssl  15:51   0:00 /usr/libexec/accounts-daemon
+root         910  0.0  0.0  13188  6676 ?        Ss   15:51   0:00 /usr/libexec/bluetooth/bluetoothd
+root         911  0.0  0.0   6620  2848 ?        Ss   15:51   0:00 /usr/sbin/cron -f
+message+     912  0.0  0.0   9648  5760 ?        Ss   15:51   0:02 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+polkitd      921  0.0  0.0 310232 10316 ?        Ssl  15:51   0:00 /usr/lib/polkit-1/polkitd --no-debug
+root         923  0.0  0.0   4012  1832 ?        Ss   15:51   0:00 /usr/sbin/rngd -f
+root         924  0.0  0.0  11412  5936 ?        Ss   15:51   0:00 /usr/sbin/smartd -n
+root         926  0.0  0.0  17104  8764 ?        Ss   15:51   0:00 /lib/systemd/systemd-logind
+root         929  0.0  0.0 394784 12892 ?        Ssl  15:51   0:00 /usr/libexec/udisks2/udisksd
+daemon       945  0.0  0.0   3588  2136 ?        Ss   15:51   0:00 /usr/sbin/atd -f
+root         965  0.0  0.0  14360  3160 ?        Ss   15:51   0:00 /usr/bin/vmware-usbarbitrator
+root         989  0.0  0.1 259892 21260 ?        Ssl  15:51   0:02 /usr/sbin/NetworkManager --no-daemon
+root        1028  0.0  0.0  17500 12236 ?        Ss   15:51   0:00 /sbin/wpa_supplicant -u -s -O DIR=/run/wpa_supplicant GROUP=netdev
+root        1050  0.0  0.0 317440 12740 ?        Ssl  15:51   0:00 /usr/sbin/ModemManager
+root        1143  0.0  0.0  77448  2168 ?        Ssl  15:51   0:10 /opt/nessus/sbin/nessus-service -q
+root        1158  2.7  3.7 1032184 539776 ?      Sl   15:51   6:59 nessusd -q
+root        1174  0.0  0.0 308392  7388 ?        SLsl 15:51   0:00 /usr/sbin/lightdm
+root        1193  4.2  1.4 1552032 208088 tty7   Ssl+ 15:51  10:54 /usr/lib/xorg/Xorg :0 -seat seat0 -auth /var/run/lightdm/root/:0 -nolisten tcp vt7 -novtswitch
+root        1194  0.0  0.0   5884  1904 tty1     Ss+  15:51   0:00 /sbin/agetty -o -p -- \u --noclear - linux
+rtkit       1289  0.0  0.0  22760  3308 ?        SNsl 15:51   0:00 /usr/libexec/rtkit-daemon
+root        1389  0.0  0.0 235100  8212 ?        Ssl  15:51   0:02 /usr/libexec/upowerd
+root        1395  0.0  0.0      0     0 ?        S<   15:51   0:00 [krfcommd]
+root        1434  0.0  0.0 162276  8084 ?        Sl   15:51   0:00 lightdm --session-child 13 20
+root        1544  0.0  0.0      0     0 ?        I<   15:51   0:00 [kworker/R-iprt-VBoxWQueue]
+root        1556  0.0  0.0      0     0 ?        S    15:51   0:00 [iprt-VBoxTscThread]
+root        1634  0.0  0.0   2976  1420 ?        Ss   15:51   0:00 /usr/bin/vmnet-bridge -s 6 -d /var/run/vmnet-bridge-0.pid -n 0 -iwlp1s0
+root        1647  0.0  0.0   2948   936 ?        Ss   15:51   0:00 /usr/bin/vmnet-netifup -s 6 -d /var/run/vmnet-netifup-vmnet1.pid /dev/vmnet1 vmnet1
+root        1658  0.0  0.0   8948  1108 ?        Ss   15:51   0:00 /usr/bin/vmnet-dhcpd -s 6 -cf /etc/vmware/vmnet1/dhcpd/dhcpd.conf -lf /etc/vmware/vmnet1/dhcpd/dhcpd.leases -pf /var/run/vmnet-dhcpd-vmnet1.pid vmnet1
+root        1661  0.0  0.0   3796  2816 ?        S    15:51   0:00 /usr/bin/vmnet-natd -s 6 -m /etc/vmware/vmnet8/nat.mac -c /etc/vmware/vmnet8/nat/nat.conf
+root        1663  0.0  0.0   2948   956 ?        Ss   15:51   0:00 /usr/bin/vmnet-netifup -s 6 -d /var/run/vmnet-netifup-vmnet8.pid /dev/vmnet8 vmnet8
+root        1671  0.0  0.0   8948  1184 ?        Ss   15:51   0:00 /usr/bin/vmnet-dhcpd -s 6 -cf /etc/vmware/vmnet8/dhcpd/dhcpd.conf -lf /etc/vmware/vmnet8/dhcpd/dhcpd.leases -pf /var/run/vmnet-dhcpd-vmnet8.pid vmnet8
+root        1736  0.0  0.0   9828  2532 ?        Ss   15:51   0:00 /usr/sbin/vmware-authdlauncher
+idiot       1747  0.0  0.0  19668 11312 ?        Ss   15:51   0:00 /lib/systemd/systemd --user
+idiot       1748  0.0  0.0  22684  5760 ?        S    15:51   0:00 (sd-pam)
+idiot       1769  0.0  0.2 2234112 37032 ?       S<sl 15:51   0:04 /usr/bin/pulseaudio --daemonize=no --log-target=journal
+idiot       1771  0.0  0.0 239976 10520 ?        SLsl 15:51   0:00 /usr/bin/gnome-keyring-daemon --foreground --components=pkcs11,secrets --control-directory=/run/user/1000/keyring
+idiot       1775  0.0  0.0   8896  5324 ?        Ss   15:51   0:00 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+idiot       1779  0.0  0.3 545432 52248 ?        Ssl  15:51   0:01 x-session-manager
+idiot       1812  0.0  0.0 156936  6160 ?        Ssl  15:51   0:00 /usr/libexec/dconf-service
+idiot       1841  0.0  0.0   7880  1584 ?        Ss   15:51   0:00 /usr/bin/ssh-agent x-session-manager
+idiot       1843  0.0  0.0 311268  8504 ?        Ssl  15:51   0:00 /usr/libexec/at-spi-bus-launcher
+idiot       1871  0.0  0.0   8320  4692 ?        S    15:51   0:01 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 11 --address=unix:path=/run/user/1000/at-spi/bus_0
+idiot       1910  0.0  0.3 1348180 47800 ?       Sl   15:51   0:07 /usr/bin/mate-settings-daemon
+idiot       1912  0.0  0.0 164532  8192 ?        Sl   15:51   0:03 /usr/libexec/at-spi2-registryd --use-gnome-session
+idiot       1918  0.5  0.4 898588 64156 ?        Sl   15:51   1:21 marco
+idiot       1919  0.0  0.0 237528  8024 ?        Ssl  15:51   0:00 /usr/libexec/gvfsd
+idiot       1927  0.0  0.0 380384  6916 ?        Sl   15:51   0:00 /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f
+idiot       1932  0.0  0.4 649748 68412 ?        Sl   15:51   0:06 mate-panel
+idiot       1958  0.0  0.0   6512  2860 ?        S    15:51   0:01 syndaemon -i 0.5 -K -R
+idiot       1959  0.0  0.5 831940 72688 ?        Sl   15:51   0:03 /usr/bin/caja
+idiot       1960  0.0  0.0 351612 12984 ?        Ssl  15:51   0:00 /usr/libexec/gvfs-udisks2-volume-monitor
+idiot       1964  0.0  0.5 641248 74620 ?        Sl   15:51   0:06 /usr/lib/x86_64-linux-gnu/brisk-menu/brisk-menu
+idiot       1965  0.1  0.6 591648 86236 ?        Sl   15:51   0:30 /usr/lib/mate-panel/wnck-applet
+idiot       1970  0.0  0.3 885212 50964 ?        Sl   15:51   0:02 mate-power-manager
+idiot       1973  0.0  0.1 186156 17200 ?        Sl   15:51   0:00 /usr/libexec/polkit-mate-authentication-agent-1
+idiot       1977  0.0  0.3 738492 51424 ?        Sl   15:51   0:00 mate-volume-control-status-icon
+idiot       1982  0.0  0.0 233564  6756 ?        Ssl  15:51   0:00 /usr/libexec/gvfs-mtp-volume-monitor
+idiot       1996  0.0  0.3 562340 46292 ?        Sl   15:51   0:03 mate-screensaver
+idiot       2001  0.0  0.4 634792 59476 ?        Sl   15:51   0:01 nm-applet
+idiot       2007  0.0  0.4 454488 60244 ?        Sl   15:51   0:03 /usr/bin/python3 /usr/bin/blueman-applet
+idiot       2008  0.0  0.0 234516  7108 ?        Ssl  15:51   0:00 /usr/libexec/gvfs-gphoto2-volume-monitor
+idiot       2009  0.0  0.2  62756 37620 ?        S    15:51   0:00 /usr/bin/python3 /usr/share/system-config-printer/applet.py
+root        2018  0.0  0.0 170548  4056 ?        Ssl  15:51   0:00 /usr/sbin/pcscd --foreground --auto-exit
+idiot       2021  0.0  0.0 234060  6468 ?        Sl   15:51   0:00 /usr/libexec/geoclue-2.0/demos/agent
+idiot       2035  0.0  0.0 233532  6440 ?        Ssl  15:51   0:00 /usr/libexec/gvfs-goa-volume-monitor
+idiot       2041  0.0  0.0 464352 13808 ?        Ssl  15:51   0:00 /usr/libexec/xdg-desktop-portal
+idiot       2053  0.0  0.0 312440  8312 ?        Ssl  15:51   0:00 /usr/libexec/gvfs-afc-volume-monitor
+idiot       2057  0.0  0.0 534136  7564 ?        Ssl  15:51   0:00 /usr/libexec/xdg-document-portal
+idiot       2067  0.0  0.0 236764  7184 ?        Ssl  15:51   0:00 /usr/libexec/xdg-permission-store
+root        2076  0.0  0.0   2488  1868 ?        Ss   15:51   0:00 fusermount3 -o rw,nosuid,nodev,fsname=portal,auto_unmount,subtype=portal -- /run/user/1000/doc
+idiot       2083  0.0  0.1 340584 24548 ?        Ssl  15:51   0:00 /usr/libexec/xdg-desktop-portal-gtk
+idiot       2123  0.0  0.3 478300 47984 ?        Sl   15:51   0:00 /usr/lib/mate-power-manager/mate-inhibit-applet
+idiot       2126  0.6  0.2 342796 30740 ?        Sl   15:51   1:45 /usr/lib/mate-applets/mate-multiload-applet
+idiot       2128  0.0  0.4 581624 70016 ?        Sl   15:51   0:02 /usr/lib/mate-panel/clock-applet
+idiot       2130  0.0  0.2 495876 39448 ?        Sl   15:51   0:00 /usr/lib/mate-panel/notification-area-applet
+idiot       2198  0.0  0.0 311504  8816 ?        Sl   15:51   0:00 /usr/libexec/gvfsd-trash --spawner :1.19 /org/gtk/gvfs/exec_spaw/0
+idiot       2212  0.0  0.0  48548  7952 ?        Ss   15:51   0:00 /usr/libexec/bluetooth/obexd
+idiot       2215  0.1  0.4 564344 66180 ?        Sl   15:51   0:18 /usr/bin/python3 /usr/bin/blueman-tray
+idiot       2259  0.0  0.0 160236  6784 ?        Ssl  15:51   0:00 /usr/libexec/gvfsd-metadata
+idiot       2282  0.1  0.4 746496 69952 ?        Sl   15:52   0:28 mate-terminal
+idiot       2314  0.0  0.0   8288  5312 pts/0    Ss   15:52   0:00 bash
+idiot       2352  5.8  5.1 12761904 727756 ?     Sl   15:52  15:03 /usr/lib/firefox-esr/firefox-esr
+idiot       2359  0.0  0.0  20232  2692 ?        Sl   15:52   0:00 /usr/lib/firefox-esr/crashhelper 2352 9 /tmp/ 11
+idiot       2452  0.0  0.3 244756 44132 ?        Sl   15:52   0:01 /usr/lib/firefox-esr/firefox-esr -contentproc -parentBuildID 20251009121631 -prefsHandle 0:37028 -prefMapHandle 1:276902 -sandboxReporter 2 -chrootClient 3 -ipcHandle 4 -initialChannelId {cc150d3f-e226-4cef-93a1-22e55ddcb25b} -parentPid 2352 -crashReporter 5 -crashHelper 6 -appDir /usr/lib/firefox-esr/browser 1 socket
+idiot       2472  0.0  1.0 2506580 151072 ?      Sl   15:52   0:04 /usr/lib/firefox-esr/firefox-esr -contentproc -isForBrowser -prefsHandle 0:37131 -prefMapHandle 1:276902 -jsInitHandle 2:242716 -parentBuildID 20251009121631 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {f915084a-7dcc-4d42-b6ab-d302021803be} -parentPid 2352 -crashReporter 6 -crashHelper 7 -greomni /usr/lib/firefox-esr/omni.ja -appomni /usr/lib/firefox-esr/browser/omni.ja -appDir /usr/lib/firefox-esr/browser 2 tab
+idiot       2477  0.1  0.8 701304 118724 ?       Sl   15:52   0:22 /usr/lib/firefox-esr/firefox-esr -contentproc -parentBuildID 20251009121631 -prefsHandle 0:37131 -prefMapHandle 1:276902 -sandboxReporter 2 -chrootClient 3 -ipcHandle 4 -initialChannelId {886f8c7b-61c3-455c-8e8b-fdf725d4e386} -parentPid 2352 -crashReporter 5 -crashHelper 6 -appDir /usr/lib/firefox-esr/browser 3 rdd
+idiot       2552  0.0  1.0 2516620 144996 ?      Sl   15:52   0:13 /usr/lib/firefox-esr/firefox-esr -contentproc -isForBrowser -prefsHandle 0:43972 -prefMapHandle 1:276902 -jsInitHandle 2:242716 -parentBuildID 20251009121631 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {fa063345-b977-4176-b01e-a49513c4e638} -parentPid 2352 -crashReporter 6 -crashHelper 7 -greomni /usr/lib/firefox-esr/omni.ja -appomni /usr/lib/firefox-esr/browser/omni.ja -appDir /usr/lib/firefox-esr/browser 5 tab
+idiot       2618  0.0  0.3 403004 55132 ?        Sl   15:52   0:10 /usr/lib/firefox-esr/firefox-esr -contentproc -parentBuildID 20251009121631 -sandboxingKind 0 -prefsHandle 0:44101 -prefMapHandle 1:276902 -sandboxReporter 2 -chrootClient 3 -ipcHandle 4 -initialChannelId {138c1927-c78d-4a46-8dd3-f19b99af7eff} -parentPid 2352 -crashReporter 5 -crashHelper 6 -appDir /usr/lib/firefox-esr/browser 6 utility
+root        2834  0.0  0.0  10324  5312 pts/0    S+   15:54   0:00 sudo su
+root        2835  0.0  0.0  10324  2028 pts/1    Ss   15:54   0:00 sudo su
+root        2836  0.0  0.0   9160  4460 pts/1    S    15:54   0:00 su
+root        2837  0.0  0.0   9344  6388 pts/1    S    15:54   0:00 bash
+root        3157  0.0  0.0      0     0 ?        I<   15:56   0:00 [kworker/R-tls-strp]
+root        5915  0.0  0.0      0     0 ?        I    16:23   0:00 [kworker/4:2-mm_percpu_wq]
+root        5997  0.0  0.0      0     0 ?        I    16:46   0:00 [kworker/6:1-events]
+root        6347  0.0  0.0  10176  2372 ?        S    16:52   0:00 dbus-launch --autolaunch=888380c63a5b48eaad56c6d34ea73946 --binary-syntax --close-stderr
+root        6348  0.0  0.0   8284  2764 ?        Ss   16:52   0:00 /usr/bin/dbus-daemon --syslog-only --fork --print-pid 5 --print-address 7 --session
+root        6360  0.0  0.0 390504 13084 ?        Sl   16:52   0:00 /usr/libexec/xdg-desktop-portal
+root        6365  0.0  0.0 459380  7736 ?        Sl   16:52   0:00 /usr/libexec/xdg-document-portal
+root        6369  0.0  0.0 236764  6880 ?        Sl   16:52   0:00 /usr/libexec/xdg-permission-store
+root        6375  0.0  0.0   2488  1536 ?        Ss   16:52   0:00 fusermount3 -o rw,nosuid,nodev,fsname=portal,auto_unmount,subtype=portal -- /root/.cache/doc
+root        6380  0.0  0.1 340516 24268 ?        Sl   16:52   0:00 /usr/libexec/xdg-desktop-portal-gtk
+root        6386  0.0  0.0 237528  7768 ?        Sl   16:52   0:00 /usr/libexec/gvfsd
+root        6391  0.0  0.0 380384  6712 ?        Sl   16:52   0:00 /usr/libexec/gvfsd-fuse /root/.cache/gvfs -f
+root        6400  0.0  0.0 239816  9744 ?        Sl   16:52   0:00 /usr/bin/gnome-keyring-daemon --start --foreground --components=secrets
+root        6411  0.0  0.0 156332  5516 ?        Sl   16:52   0:00 /usr/libexec/dconf-service
+root        8370  0.0  0.0      0     0 ?        I    18:11   0:01 [kworker/0:2-events]
+root        8474  0.0  0.0      0     0 ?        I    18:11   0:00 [kworker/5:0-cgroup_destroy]
+root        8826  0.0  0.0      0     0 ?        I    18:22   0:00 [kworker/7:0-events]
+root        8827  0.0  0.0      0     0 ?        I    18:22   0:00 [kworker/1:2-events]
+ntpsec      9004  0.0  0.0  11024 10900 ?        SLs  18:22   0:00 /usr/sbin/ntpd -p /run/ntpd.pid -g -N -c /run/ntpsec/ntp.conf.dhcp -u ntpsec:ntpsec
+root        9092  0.4  0.0      0     0 ?        I    18:40   0:24 [kworker/u32:4-events_unbound]
+root        9299  0.0  0.0      0     0 ?        I    18:50   0:00 [kworker/2:3-events]
+idiot       9337  6.4  4.4 3446808 636728 ?      Sl   18:51   5:02 /usr/lib/firefox-esr/firefox-esr -contentproc -isForBrowser -prefsHandle 0:42311 -prefMapHandle 1:276902 -jsInitHandle 2:242716 -parentBuildID 20251009121631 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {7de7cbb5-a883-4d9a-894e-82bde235f940} -parentPid 2352 -crashReporter 6 -crashHelper 7 -greomni /usr/lib/firefox-esr/omni.ja -appomni /usr/lib/firefox-esr/browser/omni.ja -appDir /usr/lib/firefox-esr/browser 40 tab
+root       10625  0.0  0.0      0     0 ?        I    19:21   0:00 [kworker/4:1]
+root       10724  0.3  0.0      0     0 ?        I    19:25   0:10 [kworker/u32:1-btrfs-endio-write]
+root       10741  0.0  0.0      0     0 ?        I    19:26   0:02 [kworker/u32:15-btrfs-endio-write]
+root       10884  0.5  0.0      0     0 ?        I    19:26   0:14 [kworker/u32:17-gfx]
+root       11143  0.0  0.0      0     0 ?        I    19:27   0:00 [kworker/3:2-events]
+idiot      11313  0.0  0.6 2451936 89108 ?       Sl   19:29   0:01 /usr/lib/firefox-esr/firefox-esr -contentproc -isForBrowser -prefsHandle 0:42478 -prefMapHandle 1:276902 -jsInitHandle 2:242716 -parentBuildID 20251009121631 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {5646c6be-37ba-4ae6-98e8-cc1af1d084c0} -parentPid 2352 -crashReporter 6 -crashHelper 7 -greomni /usr/lib/firefox-esr/omni.ja -appomni /usr/lib/firefox-esr/browser/omni.ja -appDir /usr/lib/firefox-esr/browser 43 tab
+idiot      11401  1.9  1.4 1461543668 208932 ?   Sl   19:30   0:44 /usr/share/codium/codium
+idiot      11406  0.0  0.3 33824604 54696 ?      S    19:30   0:00 /usr/share/codium/codium --type=zygote --no-zygote-sandbox
+idiot      11407  0.0  0.3 33824596 54676 ?      S    19:30   0:00 /usr/share/codium/codium --type=zygote
+idiot      11409  0.0  0.0 33824620 13008 ?      S    19:30   0:00 /usr/share/codium/codium --type=zygote
+idiot      11436  4.1  1.2 34368904 177940 ?     Sl   19:30   1:34 /usr/share/codium/codium --type=zygote --no-zygote-sandbox
+idiot      11446  0.0  0.5 33891268 78676 ?      Sl   19:30   0:00 /proc/self/exe --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --enable-crash-reporter=7ae338fb-5508-4c25-9a69-c143cf7b0ba8,no_channel --user-data-dir=/home/idiot/.config/VSCodium --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,15438349613407432560,4038316881507836708,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,PdfUseShowSaveFilePicker --disable-features=CalculateNativeWinOcclusion,FontationsLinuxSystemFonts,ScreenAIOCREnabled,SpareRendererForSitePerProcess --variations-seed-version
+idiot      11501 13.1  2.6 1479883388 372284 ?   Sl   19:30   5:01 /usr/share/codium/codium --type=zygote
+idiot      11586  0.6  0.8 1461368732 124860 ?   Sl   19:30   0:14 /proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --enable-crash-reporter=7ae338fb-5508-4c25-9a69-c143cf7b0ba8,no_channel --user-data-dir=/home/idiot/.config/VSCodium --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,15438349613407432560,4038316881507836708,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,PdfUseShowSaveFilePicker --disable-features=CalculateNativeWinOcclusion,FontationsLinuxSystemFonts,ScreenAIOCREnabled,SpareRendererForSitePerProcess --variations-seed-version
+idiot      11599  0.7  1.2 1461347168 173852 ?   Sl   19:30   0:17 /proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --dns-result-order=ipv4first --experimental-network-inspection --inspect-port=0 --enable-crash-reporter=7ae338fb-5508-4c25-9a69-c143cf7b0ba8,no_channel --user-data-dir=/home/idiot/.config/VSCodium --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,15438349613407432560,4038316881507836708,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,PdfUseShowSaveFilePicker --disable-features=CalculateNativeWinOcclusion,FontationsLinuxSystemFonts,ScreenAIOCREnabled,SpareRendererForSitePerProcess --variations-seed-version
+idiot      11625  0.1  0.8 1461343408 117168 ?   Sl   19:30   0:02 /proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --enable-crash-reporter=7ae338fb-5508-4c25-9a69-c143cf7b0ba8,no_channel --user-data-dir=/home/idiot/.config/VSCodium --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,15438349613407432560,4038316881507836708,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,PdfUseShowSaveFilePicker --disable-features=CalculateNativeWinOcclusion,FontationsLinuxSystemFonts,ScreenAIOCREnabled,SpareRendererForSitePerProcess --variations-seed-version
+idiot      11626  0.1  0.7 1461360352 110564 ?   Sl   19:30   0:02 /proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --enable-crash-reporter=7ae338fb-5508-4c25-9a69-c143cf7b0ba8,no_channel --user-data-dir=/home/idiot/.config/VSCodium --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,15438349613407432560,4038316881507836708,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,PdfUseShowSaveFilePicker --disable-features=CalculateNativeWinOcclusion,FontationsLinuxSystemFonts,ScreenAIOCREnabled,SpareRendererForSitePerProcess --variations-seed-version
+idiot      11693  0.0  0.0   8572  5044 pts/2    Ss   19:30   0:00 /usr/bin/bash --init-file /usr/share/codium/resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+idiot      11822  0.0  0.0   8440  5156 pts/4    Ss+  19:30   0:00 /usr/bin/bash --init-file /usr/share/codium/resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+idiot      11834  4.3  3.9 1009100 557656 ?      Sl   19:30   1:39 /home/idiot/Hacking/ForenX/forenxEnv/bin/python /home/idiot/.vscode-oss/extensions/ms-python.python-2025.16.0-linux-x64/python_files/run-jedi-language-server.py
+idiot      11904  0.1  0.3  55428 47188 ?        S    19:30   0:04 /home/idiot/Hacking/ForenX/forenxEnv/bin/python /home/idiot/.vscode-oss/extensions/ms-python.python-2025.16.0-linux-x64/python_files/lib/jedilsp/jedi/inference/compiled/subprocess/__main__.py /home/idiot/.vscode-oss/extensions/ms-python.python-2025.16.0-linux-x64/python_files/lib/jedilsp 3.11.2
+root       11917  0.0  0.0  10336  5256 pts/2    S+   19:30   0:00 sudo su
+root       11918  0.0  0.0  10336  1632 pts/5    Ss   19:30   0:00 sudo su
+root       11919  0.0  0.0   9164  4288 pts/5    S    19:30   0:00 su
+root       11920  0.0  0.0   9336  6072 pts/5    S+   19:30   0:00 bash
+root       12719  0.1  0.0      0     0 ?        I    19:38   0:01 [kworker/u32:2-btrfs-compressed-write]
+root       13372  0.0  0.0      0     0 ?        I    19:40   0:00 [kworker/6:3-events]
+root       13422  0.0  0.0      0     0 ?        I    19:40   0:00 [kworker/5:3-mm_percpu_wq]
+root       13424  0.0  0.0      0     0 ?        I    19:40   0:00 [kworker/7:1-events]
+root       13535  0.0  0.0      0     0 ?        I<   19:40   0:00 [kworker/u33:8-ttm]
+idiot      13689  0.0  0.0   8572  5236 pts/6    Ss   19:43   0:00 /usr/bin/bash --init-file /usr/share/codium/resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+root       13806  0.0  0.0  10336  5184 pts/6    S+   19:43   0:00 sudo su
+root       13817  0.0  0.0  10336  1820 pts/7    Ss   19:43   0:00 sudo su
+root       13818  0.0  0.0   9164  4224 pts/7    S    19:43   0:00 su
+root       13819  0.0  0.0   9336  6288 pts/7    S+   19:43   0:00 bash
+root       14194  0.0  0.0      0     0 ?        I<   19:44   0:00 [kworker/u33:9-ttm]
+root       14195  0.0  0.0      0     0 ?        I<   19:44   0:00 [kworker/u33:10-ttm]
+root       14196  0.0  0.0      0     0 ?        I<   19:44   0:00 [kworker/u33:11-ttm]
+idiot      14217  0.0  0.6 2451936 91888 ?       Sl   19:44   0:01 /usr/lib/firefox-esr/firefox-esr -contentproc -isForBrowser -prefsHandle 0:42478 -prefMapHandle 1:276902 -jsInitHandle 2:242716 -parentBuildID 20251009121631 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {39df4f6b-d036-4e75-8efc-3a596a9c1af9} -parentPid 2352 -crashReporter 6 -crashHelper 7 -greomni /usr/lib/firefox-esr/omni.ja -appomni /usr/lib/firefox-esr/browser/omni.ja -appDir /usr/lib/firefox-esr/browser 44 tab
+idiot      14259  0.0  0.6 2451936 90068 ?       Sl   19:44   0:01 /usr/lib/firefox-esr/firefox-esr -contentproc -isForBrowser -prefsHandle 0:42478 -prefMapHandle 1:276902 -jsInitHandle 2:242716 -parentBuildID 20251009121631 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {21d62211-7a1a-48d7-afeb-b8d18bb3639c} -parentPid 2352 -crashReporter 6 -crashHelper 7 -greomni /usr/lib/firefox-esr/omni.ja -appomni /usr/lib/firefox-esr/browser/omni.ja -appDir /usr/lib/firefox-esr/browser 45 tab
+root       14478  0.0  0.0      0     0 ?        I<   19:49   0:00 [kworker/u33:0-ttm]
+root       14483  0.0  0.0      0     0 ?        I    19:50   0:00 [kworker/0:3-events]
+root       15038  0.0  0.0      0     0 ?        I    19:52   0:00 [kworker/u32:5-btrfs-endio-write]
+root       15105  0.0  0.0      0     0 ?        I    19:52   0:00 [kworker/u32:7-btrfs-endio-write]
+root       15508  0.0  0.0      0     0 ?        I<   19:53   0:00 [kworker/u33:2-ttm]
+root       16104  0.0  0.0      0     0 ?        I    20:00   0:00 [kworker/1:3-mm_percpu_wq]
+root       16279  0.1  0.0      0     0 ?        I    20:02   0:00 [kworker/u32:3-btrfs-endio-write]
+root       16280  0.0  0.0      0     0 ?        I    20:02   0:00 [kworker/u32:6-flush-btrfs-1]
+root       16560  0.0  0.0      0     0 ?        I<   20:05   0:00 [kworker/u33:1]
+root       16561  0.0  0.0      0     0 ?        I<   20:05   0:00 [kworker/u33:3]
+root       16703  0.0  0.0      0     0 ?        I    20:07   0:00 [kworker/u32:0]
+root       16708  0.0  0.0      0     0 ?        I    20:08   0:00 [kworker/7:2-cgroup_destroy]
+root       16709  0.0  0.0      0     0 ?        I    20:08   0:00 [kworker/2:0-mm_percpu_wq]
+root       16758  0.0  0.0  11412  5100 pts/1    R+   20:09   0:00 ps aux
