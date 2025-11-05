@@ -44,10 +44,12 @@ Run the main controller script:
 python3 forenx.py --action analyze --input samples/auth.log --output results.txt
 
 Arguments
+
 Flag	Description
 --action	Action to perform (analyze, recover, etc.)
 --input	Input file path (log, memory dump, pcap, etc.)
 --output	Output file to store results
+
 Example Commands
 🔹 Log Analysis
 
@@ -63,7 +65,7 @@ python3 forenx.py --action analyze --input samples/capture.pcap --output network
 
 🔹 File Artifact Extraction
 
-python3 forenx.py --action analyze --input /home/user/documents --output file_report.txt
+python3 forenx.py --action extract --input /home/user/documents --output file_report.txt
 
 📦 Requirements
 

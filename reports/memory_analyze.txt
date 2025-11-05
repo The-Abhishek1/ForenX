@@ -1,0 +1,73 @@
+===== ForenX Memory Triage Report =====
+Target file: samples/memory.mem
+
+[1] IP Address Candidates (top 30):
+  203.0.113.50 - 3 occurrence(s)
+  192.168.1.15 - 2 occurrence(s)
+  10.0.1.23 - 1 occurrence(s)
+  04:00:03 - 1 occurrence(s)
+  04:00:07 - 1 occurrence(s)
+  203.0.113.22 - 1 occurrence(s)
+  06:22:55 - 1 occurrence(s)
+  203.0.113.8 - 1 occurrence(s)
+  08:11:11 - 1 occurrence(s)
+  10.0.0.45 - 1 occurrence(s)
+  08:15:42 - 1 occurrence(s)
+  02:05:30 - 1 occurrence(s)
+  02:05:34 - 1 occurrence(s)
+  10.0.0.5 - 1 occurrence(s)
+  03:46:01 - 1 occurrence(s)
+  198.51.100.9 - 1 occurrence(s)
+  04:10:01 - 1 occurrence(s)
+  198.51.100.77 - 1 occurrence(s)
+  05:00:12 - 1 occurrence(s)
+  10.0.2.8 - 1 occurrence(s)
+  05:05:20 - 1 occurrence(s)
+
+[2] Email Candidates (top 30):
+  [None found]
+
+[3] URL Candidates (top 30):
+  [None found]
+
+[4] Credential-like Candidates (top 50):
+  Value: alice - 1 occurrence(s)
+    Context: user=alice
+  Value: secret1234 - 1 occurrence(s)
+    Context: password=secret1234
+  Value: MyDBP@ssw0rd! - 1 occurrence(s)
+    Context: db_pass=MyDBP@ssw0rd!
+  Value: bob - 1 occurrence(s)
+    Context: LastLoginUser=bob
+  Value: ABCD-1234-XYZ - 1 occurrence(s)
+    Context: api_key=ABCD-1234-XYZ
+  Value: helloWorld - 1 occurrence(s)
+    Context: pwd=helloWorld
+
+[5] JWT / Token Candidates (heuristic):
+  [None found]
+
+[6] SSH / Key Artefacts (first matches):
+  Key-snippet-1: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD...
+
+[7] High-entropy printable strings (possible keys):
+  Entropy=4.85 | Sample: Oct 21 06:22:55 myhost sshd[1300]: Accepted publickey for emily from 203.0.113.22 port 61234 ssh2: ED25519 SHA256:efgh5678
+  Entropy=4.81 | Sample: Oct 22 04:10:01 myhost sshd[1602]: Accepted publickey for bob from 198.51.100.9 port 34512 ssh2: RSA SHA256:abcd
+  Entropy=4.70 | Sample: Oct 22 05:00:12 myhost sshd[1620]: Failed password for invalid user oracle from 198.51.100.77 port 49999 ssh2
+  Entropy=4.70 | Sample: Oct 21 08:11:11 myhost sshd[1401]: Failed password for invalid user guest from 203.0.113.8 port 34567 ssh2
+  Entropy=4.63 | Sample: Oct 22 03:46:01 myhost sshd[1546]: Accepted password for alice from 10.0.0.5 port 55874 ssh2
+  Entropy=4.58 | Sample: Oct 21 04:00:07 myhost sshd[1234]: Failed password for root from 192.168.1.15 port 45312 ssh2
+  Entropy=4.55 | Sample: Oct 21 04:00:03 myhost sshd[1234]: Failed password for root from 192.168.1.15 port 45312 ssh2
+  Entropy=4.49 | Sample: Oct 21 08:15:42 myhost sshd[1420]: Accepted password for frank from 10.0.0.45 port 52100 ssh2
+  Entropy=4.48 | Sample: Oct 22 05:05:20 myhost sshd[1633]: Accepted password for george from 10.0.2.8 port 60221 ssh2
+  Entropy=4.42 | Sample: Oct 22 02:05:34 myhost sshd[1500]: Failed password for root from 203.0.113.50 port 42012 ssh2
+  Entropy=4.39 | Sample: Oct 22 02:05:30 myhost sshd[1500]: Failed password for root from 203.0.113.50 port 42012 ssh2
+
+[Summary]
+  IP candidates: 21
+  Email candidates: 0
+  URL candidates: 0
+  Credential candidates: 6
+  Token/jwt candidates: 0
+  SSH/key artefacts: 1
+  High-entropy candidates: 11
