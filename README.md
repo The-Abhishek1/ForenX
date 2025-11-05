@@ -18,7 +18,7 @@ It focuses on analyzing Linux logs, memory dumps, PCAP files, and file artifacts
 ---
 
 ## 🧰 Project Structure
-
+```bash
 ForenX/
 ├── forenx.py # Main controller script
 ├── modules/
@@ -40,7 +40,7 @@ ForenX/
 ## ⚙️ Usage
 
 Run the main controller script:
-```bash
+
 python3 forenx.py --action analyze --input samples/auth.log --output results.txt
 
 Arguments
@@ -74,11 +74,12 @@ Install dependencies before running:
 pip install scapy pillow python-magic exifread
 
 🧑‍💻 Author
-
 Abhishek
+
 Ethical Hacker | Cybersecurity Enthusiast | Developer
 📍 Specialized in Cyber Forensics, Penetration Testing & Security Automation
-🔗 GitHub: your-username
+🔗 GitHub: The-Abhishek1
+
 ⚠️ Disclaimer
 
 This tool is intended for educational and ethical purposes only.
