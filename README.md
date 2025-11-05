@@ -46,7 +46,7 @@ python3 forenx.py --action analyze --input samples/auth.log --output results.txt
 Arguments
 
 Flag	Description
---action	Action to perform (analyze, recover, etc.)
+--action	Action to perform (analyze, extract, recover, report, etc.)
 --input	Input file path (log, memory dump, pcap, etc.)
 --output	Output file to store results
 
@@ -73,8 +73,7 @@ Install dependencies before running:
 
 pip install scapy pillow python-magic exifread
 
-🧑‍💻 Author
-Abhishek
+🧑‍💻 Author  Abhishek
 
 Ethical Hacker | Cybersecurity Enthusiast | Developer
 📍 Specialized in Cyber Forensics, Penetration Testing & Security Automation
