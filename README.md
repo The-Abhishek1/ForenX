@@ -73,7 +73,7 @@ Install dependencies before running:
 
 pip install scapy pillow python-magic exifread
 
-🧑‍💻 Author  Abhishek
+🧑‍💻 Author: Abhishek
 
 Ethical Hacker | Cybersecurity Enthusiast | Developer
 📍 Specialized in Cyber Forensics, Penetration Testing & Security Automation
